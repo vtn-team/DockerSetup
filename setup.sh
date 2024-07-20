@@ -28,15 +28,15 @@ mkdir apiServer
 cd apiServer
 git clone https://github.com/${GITHUB_USER}/${API_SERVER_PROJECT} ./
 cd ${BASE_DIR}
-cp docker/api_server/Dockerfile apiServer/Dockerfile
+cp docker/apiServer/Dockerfile apiServer/Dockerfile
 
 # ゲームサーバのclone
-cd ${BASE_DIR}
-mkdir gameServer
-cd gameServer
-git clone https://github.com/${GITHUB_USER}/${GAME_SERVER_PROJECT} ./
-cd ${BASE_DIR}
-cp docker/game_server/Dockerfile apiServer/Dockerfile
+#cd ${BASE_DIR}
+#mkdir gameServer
+#cd gameServer
+#git clone https://github.com/${GITHUB_USER}/${GAME_SERVER_PROJECT} ./
+#cd ${BASE_DIR}
+#cp docker/gameServer/Dockerfile gameServer/Dockerfile
 
 # 環境構築のみ
 cd ${BASE_DIR}

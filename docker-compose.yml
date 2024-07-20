@@ -43,7 +43,7 @@ services:
       - mariadb
       - redis
     build:
-      context: ./APIServer
+      context: ./apiServer
       args:
         - DB_USERNAME=${DB_USERNAME}
         - DB_PASSWORD=${DB_PASSWORD}
