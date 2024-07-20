@@ -14,8 +14,6 @@ services:
     ports:
       - 3306:3306
     restart: always
-    networks:
-      - backend
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -27,16 +25,12 @@ services:
       - "8080:80"
     volumes:
       - ./phpmyadmin/sessions:/sessions
-    networks:
-      - backend
 
   redis:
     image: redis:latest
     restart: always
     ports:
       - "6379:6379"
-    networks:
-      - backend
 
   api-server:
     depends_on:
@@ -49,10 +43,4 @@ services:
         - DB_PASSWORD=${DB_PASSWORD}
     tty: true
     ports: 
-      - 80:4649
-    networks:
-      - backend
-
-networks:
-  backend:
-    driver: bridge
+      - 80:80
