@@ -27,8 +27,7 @@ BASE_DIR="$(cd $(dirname $0); pwd)"
 mkdir apiServer
 cd apiServer
 git clone https://github.com/${GITHUB_USER}/${API_SERVER_PROJECT} ./
-cd ${BASE_DIR}
-cp docker/apiServer/Dockerfile apiServer/Dockerfile
+git checkout docker
 
 # ゲームサーバのclone
 #cd ${BASE_DIR}
